@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Cadence simulation
+psf/
+*.psf
+*.raw
+*.trn
+*.ahdlSimDB
+*.cdslck
+
+# OS
+.DS_Store
+Thumbs.db
