@@ -2,122 +2,275 @@
 
 ![DTrace Hero Banner](images/01-hero-banner.png)
 
-Engineering Traceability Framework for Analog IC Design
+<p align="center">
+  <img src="https://img.shields.io/badge/Cadence-Virtuoso-blue" />
+  <img src="https://img.shields.io/badge/ADE%20XL-Integration-teal" />
+  <img src="https://img.shields.io/badge/SKILL-Automation-green" />
+  <img src="https://img.shields.io/badge/Python-2.6-yellow" />
+  <img src="https://img.shields.io/badge/Storage-File%20System-lightgrey" />
+  <img src="https://img.shields.io/badge/License-MIT-brightgreen" />
+</p>
 
-DTrace is an engineering traceability framework for Cadence Virtuoso ADE XL that automatically captures schematic snapshots, compares simulation results across iterations, records engineering rationale, and builds an immutable design history using SKILL and Python.
+**DTrace** is an engineering traceability framework for **Cadence Virtuoso ADE XL**. It captures schematic checkpoints, parses simulation results, compares design iterations, records engineering rationale, and builds an immutable engineering history using **SKILL** and **Python**.
 
----
+DTrace is built around one principle:
 
-# Why DTrace?
-
-Traditional analog design workflows rely heavily on an engineer's memory.
-
-After dozens of design iterations it becomes difficult to answer questions such as:
-
-- Which transistor sizing caused this improvement?
-- Which simulation introduced this regression?
-- When did the worst corner change?
-- Why was this bias current modified?
-- What was the reasoning behind this compensation change?
-
-DTrace automatically records every engineering iteration so the complete design history is permanently preserved.
-
-![Workflow Comparison](images/04-comparison.png)
+> **Historian, not Advisor.**  
+> DTrace records what changed and preserves engineering intent. It does not recommend design changes or replace analog design judgement.
 
 ---
 
-# System Architecture
+## Contents
 
-The framework consists of four major components that work together to capture, analyze, compare, and archive every design iteration.
+- [Why DTrace?](#why-dtrace)
+- [System Architecture](#system-architecture)
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Engineering History](#engineering-history)
+- [Repository Structure](#repository-structure)
+- [Example Output](#example-output)
+- [Project Status](#project-status)
+- [Limitations](#limitations)
+- [License](#license)
 
-- ADE XL executes simulations.
-- SKILL captures schematic state automatically.
-- Python parses and compares simulation results.
-- Engineering History stores immutable checkpoint reports.
+---
+
+## Why DTrace?
+
+Traditional analog IC design workflows rely heavily on manual tracking.
+
+After many design iterations, it becomes difficult to answer questions such as:
+
+- Which schematic change caused this result shift?
+- When did a regression first appear?
+- Which corner became the new worst case?
+- Why was this bias current, device size, or compensation value changed?
+- Which simulation result corresponds to which schematic state?
+
+DTrace solves this by preserving the full engineering context of each iteration.
+
+![Traditional Workflow vs DTrace](images/04-comparison.png)
+
+---
+
+## System Architecture
+
+DTrace separates the workflow into four layers:
+
+1. **ADE XL** runs the designer's existing simulation setup.
+2. **SKILL** captures schematic state and interfaces with Cadence.
+3. **Python** parses, compares, and generates reports.
+4. **Engineering History** stores immutable checkpoint records.
 
 ![System Architecture](images/01-system-architecture_2.png)
 
 ---
 
-# Getting Started
+## Technology Stack
 
-DTrace integrates directly into the normal ADE XL workflow without requiring engineers to change their existing simulation process.
+| Layer | Technology |
+|---|---|
+| Design Environment | Cadence Virtuoso IC6.1.5 |
+| Simulation Manager | ADE XL |
+| Cadence Automation | SKILL |
+| Processing Engine | Python 2.6 |
+| Data Exchange | CSV |
+| Storage | JSON + file system |
+| License | MIT |
 
-![Quick Start](images/02-quickstart.png)
+DTrace does **not** require:
+
+- cloud services
+- databases
+- internet access
+- external Python libraries
+
+It is designed to run inside the existing Cadence design environment.
 
 ---
 
-# Features
+## Getting Started
 
-Core capabilities provided by DTrace include:
+The normal workflow is:
 
-- Automatic schematic capture before simulation
-- Automatic simulation result comparison
-- Parameter-level schematic diff
-- Worst-corner analysis
-- Regression detection
-- Engineering note recording
-- Immutable checkpoint history
+1. Copy SKILL files into the Cadence environment.
+2. Copy Python scripts into the working directory.
+3. Load the SKILL entry point through `.cdsinit`.
+4. Open ADE XL.
+5. Start the DTrace run flow.
+6. Review the comparison popup.
+7. Save the checkpoint.
+
+![Quick Start](images/02-quickstart.png)
+
+> Detailed setup instructions will be added as the repository is cleaned and packaged.
+
+---
+
+## Features
+
+DTrace provides four core capabilities:
+
+- **Automatic Capture**
+  - schematic checkpoint capture
+  - ADE XL result export capture
+
+- **Comparison Engine**
+  - schematic diff
+  - simulation result diff
+  - regression detection
+  - worst-corner tracking
+
+- **Engineering Documentation**
+  - designer rationale captured per checkpoint
+  - immutable checkpoint reports
+
+- **History Management**
+  - sequential checkpoint history
+  - file-system based archive
+  - JSON reports
 
 ![Feature Overview](images/06-features.png)
 
 ---
 
-# Engineering History
+## Engineering History
 
-Every design iteration becomes a permanent checkpoint that can be revisited at any time.
+Each design iteration becomes a permanent checkpoint.
 
-Each checkpoint stores:
+A checkpoint may contain:
 
-- Schematic snapshot
-- Simulation results
-- Schematic differences
-- Performance differences
-- Engineering rationale
+- schematic snapshot
+- ADE XL setup state
+- simulation results
+- schematic diff
+- result diff
+- engineering note
+- checkpoint report
 
-![Engineering Timeline](images/05-timeline.png)
+![Engineering History Timeline](images/05-timeline.png)
 
 ---
 
-# Repository Structure
-
-The repository is organized into separate SKILL, Python, documentation, and report components.
+## Repository Structure
 
 ![Repository Structure](images/03-repo-structure.png)
 
----
-
-# Repository Layout
-
-```
+```text
 DTrace/
 ├── docs/
+│   └── Engineering notebook, setup notes, and documentation
+│
 ├── examples/
+│   └── Sample schematic/result files for reference
+│
 ├── images/
+│   └── README figures and documentation images
+│
 ├── python/
+│   └── Python parsing, comparison, and checkpoint scripts
+│
 ├── sample_reports/
+│   └── Example generated checkpoint reports
+│
 ├── scripts/
+│   └── Helper scripts
+│
 ├── skill/
+│   └── Cadence SKILL integration files
+│
 ├── tests/
+│   └── Future regression tests
+│
 ├── .gitignore
 ├── LICENSE
 └── README.md
+````
+
+---
+
+## Example Output
+
+DTrace generates checkpoint reports that combine:
+
+* modified schematic parameters
+* simulation result changes
+* pass/fail transitions
+* worst-corner movement
+* engineering note
+* timestamp and checkpoint metadata
+
+Example checkpoint reports will be added under:
+
+```text
+sample_reports/
 ```
 
 ---
 
-# Technology Stack
+## Project Status
 
-- Cadence Virtuoso IC6.1.5
-- ADE XL
-- SKILL
-- Python 2.6
-- JSON
-- CSV
-- File-system based storage
+Current repository status:
+
+* Documentation structure completed
+* Visual assets completed
+* Repository structure created
+* SKILL and Python source upload in progress
+* Sample reports to be added
+* Setup guide to be added
+
+This repository is being prepared as a public portfolio-quality engineering project.
 
 ---
 
-# License
+## Limitations
 
-Released under the MIT License.
+Current known limitations:
+
+* Developed and validated in Cadence Virtuoso IC6.1.5
+* Python 2.6 compatibility maintained due to Cadence environment
+* Designed for ADE XL workflow
+* Not validated on Maestro
+* Top-level schematic extraction only in current version
+* File paths may require local configuration before reuse
+
+---
+
+## Documentation
+
+The full engineering design notebook documents:
+
+* motivation
+* requirements
+* architecture
+* implementation
+* engineering decisions
+* debugging history
+* validation
+* limitations
+* future work
+
+The notebook will be added under:
+
+```text
+docs/
+```
+
+---
+
+## License
+
+This project is released under the MIT License.
+
+---
+
+## Author
+
+**Vagish Revankar**
+
+Analog / Mixed-Signal IC Design
+Cadence Virtuoso • ADE XL • SKILL • Python • EDA Automation
+
+```
+```
