@@ -1,0 +1,1133 @@
+{
+  "note": "Example engineering checkpoint", 
+  "adexl_diff": {
+    "value_changes": [
+      {
+        "prev_worst_float": 213700.0, 
+        "curr_worst_corner": {
+          "process": "FF", 
+          "corner": "FF_0", 
+          "temperature": "-40", 
+          "value": "3.144e6"
+        }, 
+        "prev_worst_corner": {
+          "process": "FS", 
+          "corner": "FS_0", 
+          "temperature": "-40", 
+          "value": "213.7e3"
+        }, 
+        "prev_nominal": "85.84e3", 
+        "prev_pf": "", 
+        "curr_pf": "", 
+        "status_change": "same", 
+        "curr_nominal": "941.4e3", 
+        "changed_corners": [
+          {
+            "process": "FF", 
+            "delta_str": "+3.003e+06", 
+            "curr_val": "3.144e6", 
+            "temperature": "-40", 
+            "prev_val": "141e3"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+5.948e+05", 
+            "curr_val": "654.5e3", 
+            "temperature": "125", 
+            "prev_val": "59.69e3"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+1.434e+06", 
+            "curr_val": "1.523e6", 
+            "temperature": "27", 
+            "prev_val": "88.79e3"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+1.855e+06", 
+            "curr_val": "2.069e6", 
+            "temperature": "-40", 
+            "prev_val": "213.7e3"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+3.964e+05", 
+            "curr_val": "471.8e3", 
+            "temperature": "125", 
+            "prev_val": "75.39e3"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+8.978e+05", 
+            "curr_val": "1.013e6", 
+            "temperature": "27", 
+            "prev_val": "115.2e3"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+1.841e+06", 
+            "curr_val": "1.98e6", 
+            "temperature": "-40", 
+            "prev_val": "138.9e3"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+3.575e+05", 
+            "curr_val": "415.1e3", 
+            "temperature": "125", 
+            "prev_val": "57.6e3"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+8.556e+05", 
+            "curr_val": "941.4e3", 
+            "temperature": "27", 
+            "prev_val": "85.84e3"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+1.561e+06", 
+            "curr_val": "1.66e6", 
+            "temperature": "-40", 
+            "prev_val": "98.65e3"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+2.871e+05", 
+            "curr_val": "330e3", 
+            "temperature": "125", 
+            "prev_val": "42.94e3"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+7.002e+05", 
+            "curr_val": "764.6e3", 
+            "temperature": "27", 
+            "prev_val": "64.39e3"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+9.269e+05", 
+            "curr_val": "1.056e6", 
+            "temperature": "-40", 
+            "prev_val": "129.1e3"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+1.963e+05", 
+            "curr_val": "249.3e3", 
+            "temperature": "125", 
+            "prev_val": "53e3"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+4.292e+05", 
+            "curr_val": "508.7e3", 
+            "temperature": "27", 
+            "prev_val": "79.52e3"
+          }
+        ], 
+        "output": "Unity Gain Frequency", 
+        "curr_worst_float": 3144000.0, 
+        "spec": ""
+      }, 
+      {
+        "prev_worst_float": 0.003578, 
+        "curr_worst_corner": {
+          "process": "SS", 
+          "corner": "SS_2", 
+          "temperature": "125", 
+          "value": "35.23e-3"
+        }, 
+        "prev_worst_corner": {
+          "process": "SS", 
+          "corner": "SS_2", 
+          "temperature": "125", 
+          "value": "3.578e-3"
+        }, 
+        "prev_nominal": "1.694e-3", 
+        "prev_pf": "pass", 
+        "curr_pf": "pass", 
+        "status_change": "same", 
+        "curr_nominal": "16.79e-3", 
+        "changed_corners": [
+          {
+            "process": "FF", 
+            "delta_str": "+0.008257", 
+            "curr_val": "9.346e-3", 
+            "temperature": "-40", 
+            "prev_val": "1.089e-3"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+0.01495", 
+            "curr_val": "16.64e-3", 
+            "temperature": "125", 
+            "prev_val": "1.688e-3"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+0.01105", 
+            "curr_val": "12.29e-3", 
+            "temperature": "27", 
+            "prev_val": "1.243e-3"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+0.01701", 
+            "curr_val": "18.92e-3", 
+            "temperature": "-40", 
+            "prev_val": "1.908e-3"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+0.03149", 
+            "curr_val": "35.06e-3", 
+            "temperature": "125", 
+            "prev_val": "3.574e-3"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+0.0228", 
+            "curr_val": "25.36e-3", 
+            "temperature": "27", 
+            "prev_val": "2.564e-3"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+0.01127", 
+            "curr_val": "12.65e-3", 
+            "temperature": "-40", 
+            "prev_val": "1.377e-3"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+0.02071", 
+            "curr_val": "23.04e-3", 
+            "temperature": "125", 
+            "prev_val": "2.332e-3"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+0.0151", 
+            "curr_val": "16.79e-3", 
+            "temperature": "27", 
+            "prev_val": "1.694e-3"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+0.008224", 
+            "curr_val": "9.354e-3", 
+            "temperature": "-40", 
+            "prev_val": "1.13e-3"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+0.01506", 
+            "curr_val": "16.75e-3", 
+            "temperature": "125", 
+            "prev_val": "1.691e-3"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+0.01109", 
+            "curr_val": "12.33e-3", 
+            "temperature": "27", 
+            "prev_val": "1.24e-3"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+0.01702", 
+            "curr_val": "18.93e-3", 
+            "temperature": "-40", 
+            "prev_val": "1.905e-3"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+0.03165", 
+            "curr_val": "35.23e-3", 
+            "temperature": "125", 
+            "prev_val": "3.578e-3"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+0.02285", 
+            "curr_val": "25.41e-3", 
+            "temperature": "27", 
+            "prev_val": "2.562e-3"
+          }
+        ], 
+        "output": "Dropout", 
+        "curr_worst_float": 0.035229999999999997, 
+        "spec": "< 200m"
+      }, 
+      {
+        "prev_worst_float": 0.0011999999999999999, 
+        "curr_worst_corner": {
+          "process": "FF", 
+          "corner": "FF_0", 
+          "temperature": "-40", 
+          "value": "880.1e-6"
+        }, 
+        "prev_worst_corner": {
+          "process": "FF", 
+          "corner": "FF_2", 
+          "temperature": "125", 
+          "value": "1.2e-3"
+        }, 
+        "prev_nominal": "760.8e-6", 
+        "prev_pf": "pass", 
+        "curr_pf": "pass", 
+        "status_change": "same", 
+        "curr_nominal": "610.6e-6", 
+        "changed_corners": [
+          {
+            "process": "FF", 
+            "delta_str": "-0.0001339", 
+            "curr_val": "880.1e-6", 
+            "temperature": "-40", 
+            "prev_val": "1.014e-3"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "-0.0004416", 
+            "curr_val": "758.4e-6", 
+            "temperature": "125", 
+            "prev_val": "1.2e-3"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "-0.0002356", 
+            "curr_val": "802.4e-6", 
+            "temperature": "27", 
+            "prev_val": "1.038e-3"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-7.18e-05", 
+            "curr_val": "647.8e-6", 
+            "temperature": "-40", 
+            "prev_val": "719.6e-6"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-0.0002277", 
+            "curr_val": "410.6e-6", 
+            "temperature": "125", 
+            "prev_val": "638.3e-6"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-0.0001252", 
+            "curr_val": "557.1e-6", 
+            "temperature": "27", 
+            "prev_val": "682.3e-6"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-8.81e-05", 
+            "curr_val": "700.5e-6", 
+            "temperature": "-40", 
+            "prev_val": "788.6e-6"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-0.0002682", 
+            "curr_val": "505.7e-6", 
+            "temperature": "125", 
+            "prev_val": "773.9e-6"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-0.0001502", 
+            "curr_val": "610.6e-6", 
+            "temperature": "27", 
+            "prev_val": "760.8e-6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-0.0001233", 
+            "curr_val": "708.1e-6", 
+            "temperature": "-40", 
+            "prev_val": "831.4e-6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-0.0003458", 
+            "curr_val": "458.5e-6", 
+            "temperature": "125", 
+            "prev_val": "804.3e-6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-0.0002023", 
+            "curr_val": "598.5e-6", 
+            "temperature": "27", 
+            "prev_val": "800.8e-6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "-7.07e-05", 
+            "curr_val": "556.5e-6", 
+            "temperature": "-40", 
+            "prev_val": "627.2e-6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "-0.0001954", 
+            "curr_val": "274.9e-6", 
+            "temperature": "125", 
+            "prev_val": "470.3e-6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "-0.0001167", 
+            "curr_val": "472.6e-6", 
+            "temperature": "27", 
+            "prev_val": "589.3e-6"
+          }
+        ], 
+        "output": "Line Regulation", 
+        "curr_worst_float": 0.00088009999999999998, 
+        "spec": "< 5m"
+      }, 
+      {
+        "prev_worst_float": 8.0340000000000007e-05, 
+        "curr_worst_corner": {
+          "process": "FF", 
+          "corner": "FF_0", 
+          "temperature": "-40", 
+          "value": "91.38e-6"
+        }, 
+        "prev_worst_corner": {
+          "process": "FF", 
+          "corner": "FF_0", 
+          "temperature": "-40", 
+          "value": "80.34e-6"
+        }, 
+        "prev_nominal": "63.01e-6", 
+        "prev_pf": "pass", 
+        "curr_pf": "pass", 
+        "status_change": "same", 
+        "curr_nominal": "70.28e-6", 
+        "changed_corners": [
+          {
+            "process": "FF", 
+            "delta_str": "+1.104e-05", 
+            "curr_val": "91.38e-6", 
+            "temperature": "-40", 
+            "prev_val": "80.34e-6"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+1.057e-05", 
+            "curr_val": "70.78e-6", 
+            "temperature": "125", 
+            "prev_val": "60.21e-6"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+1.107e-05", 
+            "curr_val": "80.01e-6", 
+            "temperature": "27", 
+            "prev_val": "68.94e-6"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+6.68e-06", 
+            "curr_val": "73.17e-6", 
+            "temperature": "-40", 
+            "prev_val": "66.49e-6"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+6.43e-06", 
+            "curr_val": "60.69e-6", 
+            "temperature": "125", 
+            "prev_val": "54.26e-6"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+6.65e-06", 
+            "curr_val": "66.28e-6", 
+            "temperature": "27", 
+            "prev_val": "59.63e-6"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+7.22e-06", 
+            "curr_val": "78.88e-6", 
+            "temperature": "-40", 
+            "prev_val": "71.66e-6"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+6.98e-06", 
+            "curr_val": "63.28e-6", 
+            "temperature": "125", 
+            "prev_val": "56.3e-6"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+7.27e-06", 
+            "curr_val": "70.28e-6", 
+            "temperature": "27", 
+            "prev_val": "63.01e-6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+6.56e-06", 
+            "curr_val": "80.36e-6", 
+            "temperature": "-40", 
+            "prev_val": "73.8e-6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+6.52e-06", 
+            "curr_val": "63.32e-6", 
+            "temperature": "125", 
+            "prev_val": "56.8e-6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+6.74e-06", 
+            "curr_val": "70.96e-6", 
+            "temperature": "27", 
+            "prev_val": "64.22e-6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+4.22e-06", 
+            "curr_val": "66.69e-6", 
+            "temperature": "-40", 
+            "prev_val": "62.47e-6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+4.16e-06", 
+            "curr_val": "56.22e-6", 
+            "temperature": "125", 
+            "prev_val": "52.06e-6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+4.26e-06", 
+            "curr_val": "60.9e-6", 
+            "temperature": "27", 
+            "prev_val": "56.64e-6"
+          }
+        ], 
+        "output": "IQ", 
+        "curr_worst_float": 9.1379999999999996e-05, 
+        "spec": "< 100u"
+      }, 
+      {
+        "prev_worst_float": 8.3839999999999997e-05, 
+        "curr_worst_corner": {
+          "process": "SF", 
+          "corner": "SF_2", 
+          "temperature": "125", 
+          "value": "78.59e-6"
+        }, 
+        "prev_worst_corner": {
+          "process": "SF", 
+          "corner": "SF_2", 
+          "temperature": "125", 
+          "value": "83.84e-6"
+        }, 
+        "prev_nominal": "52.08e-6", 
+        "prev_pf": "fail", 
+        "curr_pf": "fail", 
+        "status_change": "same", 
+        "curr_nominal": "48.89e-6", 
+        "changed_corners": [
+          {
+            "process": "FF", 
+            "delta_str": "-1.64e-06", 
+            "curr_val": "27.18e-6", 
+            "temperature": "-40", 
+            "prev_val": "28.82e-6"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "-3.7e-06", 
+            "curr_val": "60.4e-6", 
+            "temperature": "125", 
+            "prev_val": "64.1e-6"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "-2.69e-06", 
+            "curr_val": "42.09e-6", 
+            "temperature": "27", 
+            "prev_val": "44.78e-6"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-1.18e-06", 
+            "curr_val": "25.8e-6", 
+            "temperature": "-40", 
+            "prev_val": "26.98e-6"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-4.05e-06", 
+            "curr_val": "58.13e-6", 
+            "temperature": "125", 
+            "prev_val": "62.18e-6"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-2.38e-06", 
+            "curr_val": "42.16e-6", 
+            "temperature": "27", 
+            "prev_val": "44.54e-6"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-1.85e-06", 
+            "curr_val": "36.13e-6", 
+            "temperature": "-40", 
+            "prev_val": "37.98e-6"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-4.48e-06", 
+            "curr_val": "66.76e-6", 
+            "temperature": "125", 
+            "prev_val": "71.24e-6"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-3.19e-06", 
+            "curr_val": "48.89e-6", 
+            "temperature": "27", 
+            "prev_val": "52.08e-6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-2.82e-06", 
+            "curr_val": "43.19e-6", 
+            "temperature": "-40", 
+            "prev_val": "46.01e-6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-5.25e-06", 
+            "curr_val": "78.59e-6", 
+            "temperature": "125", 
+            "prev_val": "83.84e-6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-4.1e-06", 
+            "curr_val": "56.92e-6", 
+            "temperature": "27", 
+            "prev_val": "61.02e-6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "-2.35e-06", 
+            "curr_val": "41.47e-6", 
+            "temperature": "-40", 
+            "prev_val": "43.82e-6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "-5.9e-06", 
+            "curr_val": "74.72e-6", 
+            "temperature": "125", 
+            "prev_val": "80.62e-6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "-4.29e-06", 
+            "curr_val": "56.81e-6", 
+            "temperature": "27", 
+            "prev_val": "61.1e-6"
+          }
+        ], 
+        "output": "Output Noise", 
+        "curr_worst_float": 7.8590000000000005e-05, 
+        "spec": "< 50u"
+      }, 
+      {
+        "prev_worst_float": 57.020000000000003, 
+        "curr_worst_corner": {
+          "process": "FF", 
+          "corner": "FF_0", 
+          "temperature": "-40", 
+          "value": "59.98"
+        }, 
+        "prev_worst_corner": {
+          "process": "FF", 
+          "corner": "FF_2", 
+          "temperature": "125", 
+          "value": "57.02"
+        }, 
+        "prev_nominal": "59.12", 
+        "prev_pf": "near", 
+        "curr_pf": "near", 
+        "status_change": "same", 
+        "curr_nominal": "61.31", 
+        "changed_corners": [
+          {
+            "process": "FF", 
+            "delta_str": "+1.26", 
+            "curr_val": "59.98", 
+            "temperature": "-40", 
+            "prev_val": "58.72"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+3.78", 
+            "curr_val": "60.8", 
+            "temperature": "125", 
+            "prev_val": "57.02"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+2.2", 
+            "curr_val": "60.51", 
+            "temperature": "27", 
+            "prev_val": "58.31"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+1.07", 
+            "curr_val": "60.78", 
+            "temperature": "-40", 
+            "prev_val": "59.71"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+2.88", 
+            "curr_val": "62.61", 
+            "temperature": "125", 
+            "prev_val": "59.73"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+1.84", 
+            "curr_val": "61.24", 
+            "temperature": "27", 
+            "prev_val": "59.4"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+1.28", 
+            "curr_val": "60.85", 
+            "temperature": "-40", 
+            "prev_val": "59.57"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+3.81", 
+            "curr_val": "62.14", 
+            "temperature": "125", 
+            "prev_val": "58.33"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+2.19", 
+            "curr_val": "61.31", 
+            "temperature": "27", 
+            "prev_val": "59.12"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+1.78", 
+            "curr_val": "61.29", 
+            "temperature": "-40", 
+            "prev_val": "59.51"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+5.26", 
+            "curr_val": "63.25", 
+            "temperature": "125", 
+            "prev_val": "57.99"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+3.04", 
+            "curr_val": "62.1", 
+            "temperature": "27", 
+            "prev_val": "59.06"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+1.55", 
+            "curr_val": "61.42", 
+            "temperature": "-40", 
+            "prev_val": "59.87"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+4.23", 
+            "curr_val": "62.94", 
+            "temperature": "125", 
+            "prev_val": "58.71"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+2.58", 
+            "curr_val": "61.69", 
+            "temperature": "27", 
+            "prev_val": "59.11"
+          }
+        ], 
+        "output": "PSRR@1k in dB", 
+        "curr_worst_float": 59.979999999999997, 
+        "spec": "> 60"
+      }, 
+      {
+        "prev_worst_float": 1.006, 
+        "curr_worst_corner": {
+          "process": "SS", 
+          "corner": "SS_2", 
+          "temperature": "125", 
+          "value": "1.006"
+        }, 
+        "prev_worst_corner": {
+          "process": "SS", 
+          "corner": "SS_2", 
+          "temperature": "125", 
+          "value": "1.006"
+        }, 
+        "prev_nominal": "1.001", 
+        "prev_pf": "pass", 
+        "curr_pf": "pass", 
+        "status_change": "same", 
+        "curr_nominal": "1.001", 
+        "changed_corners": [
+          {
+            "process": "FS", 
+            "delta_str": "-0.0001", 
+            "curr_val": "999.4e-3", 
+            "temperature": "-40", 
+            "prev_val": "999.5e-3"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-0.0001", 
+            "curr_val": "998.4e-3", 
+            "temperature": "-40", 
+            "prev_val": "998.5e-3"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-0.0001", 
+            "curr_val": "997.7e-3", 
+            "temperature": "-40", 
+            "prev_val": "997.8e-3"
+          }
+        ], 
+        "output": "Vout", 
+        "curr_worst_float": 1.006, 
+        "spec": "range 990m 1.01"
+      }
+    ], 
+    "no_changes": [
+      "Load Regulation", 
+      "Overshoot", 
+      "Undershoot"
+    ], 
+    "new_metrics": [], 
+    "prev_adexl": 5, 
+    "removed_metrics": [], 
+    "curr_adexl": 6, 
+    "improvements": [
+      {
+        "prev_worst_float": 31.010000000000002, 
+        "curr_worst_corner": {
+          "process": "SS", 
+          "corner": "SS_2", 
+          "temperature": "125", 
+          "value": "62.01"
+        }, 
+        "prev_worst_corner": {
+          "process": "SF", 
+          "corner": "SF_2", 
+          "temperature": "125", 
+          "value": "31.01"
+        }, 
+        "prev_nominal": "54.8", 
+        "prev_pf": "fail", 
+        "curr_pf": "pass", 
+        "status_change": "improvement", 
+        "curr_nominal": "92.89", 
+        "changed_corners": [
+          {
+            "process": "FF", 
+            "delta_str": "+12.85", 
+            "curr_val": "94.04", 
+            "temperature": "-40", 
+            "prev_val": "81.19"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+58.56", 
+            "curr_val": "101", 
+            "temperature": "125", 
+            "prev_val": "42.44"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "+40.01", 
+            "curr_val": "98.67", 
+            "temperature": "27", 
+            "prev_val": "58.66"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-1.35", 
+            "curr_val": "90.24", 
+            "temperature": "-40", 
+            "prev_val": "91.59"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+36.28", 
+            "curr_val": "82.85", 
+            "temperature": "125", 
+            "prev_val": "46.57"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "+24.24", 
+            "curr_val": "89.35", 
+            "temperature": "27", 
+            "prev_val": "65.11"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+15.01", 
+            "curr_val": "92.28", 
+            "temperature": "-40", 
+            "prev_val": "77.27"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+48.21", 
+            "curr_val": "87.3", 
+            "temperature": "125", 
+            "prev_val": "39.09"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "+38.09", 
+            "curr_val": "92.89", 
+            "temperature": "27", 
+            "prev_val": "54.8"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+30.07", 
+            "curr_val": "92.64", 
+            "temperature": "-40", 
+            "prev_val": "62.57"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+53.88", 
+            "curr_val": "84.89", 
+            "temperature": "125", 
+            "prev_val": "31.01"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "+48.68", 
+            "curr_val": "93.01", 
+            "temperature": "27", 
+            "prev_val": "44.33"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+17.5", 
+            "curr_val": "85.49", 
+            "temperature": "-40", 
+            "prev_val": "67.99"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+29.02", 
+            "curr_val": "62.01", 
+            "temperature": "125", 
+            "prev_val": "32.99"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "+30.3", 
+            "curr_val": "77.72", 
+            "temperature": "27", 
+            "prev_val": "47.42"
+          }
+        ], 
+        "output": "PHASE MARGIN", 
+        "curr_worst_float": 62.009999999999998, 
+        "spec": "> 60"
+      }
+    ], 
+    "regressions": [
+      {
+        "prev_worst_float": 36.130000000000003, 
+        "curr_worst_corner": {
+          "process": "FF", 
+          "corner": "FF_0", 
+          "temperature": "-40", 
+          "value": "29.74"
+        }, 
+        "prev_worst_corner": {
+          "process": "FS", 
+          "corner": "FS_0", 
+          "temperature": "-40", 
+          "value": "36.13"
+        }, 
+        "prev_nominal": "42.51", 
+        "prev_pf": "near", 
+        "curr_pf": "fail", 
+        "status_change": "regression", 
+        "curr_nominal": "34.67", 
+        "changed_corners": [
+          {
+            "process": "FF", 
+            "delta_str": "-6.81", 
+            "curr_val": "29.74", 
+            "temperature": "-40", 
+            "prev_val": "36.55"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "-8.8", 
+            "curr_val": "36.18", 
+            "temperature": "125", 
+            "prev_val": "44.98"
+          }, 
+          {
+            "process": "FF", 
+            "delta_str": "-8.51", 
+            "curr_val": "31.96", 
+            "temperature": "27", 
+            "prev_val": "40.47"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-6.18", 
+            "curr_val": "29.95", 
+            "temperature": "-40", 
+            "prev_val": "36.13"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-8.69", 
+            "curr_val": "35.89", 
+            "temperature": "125", 
+            "prev_val": "44.58"
+          }, 
+          {
+            "process": "FS", 
+            "delta_str": "-8.38", 
+            "curr_val": "31.82", 
+            "temperature": "27", 
+            "prev_val": "40.2"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-6.77", 
+            "curr_val": "31.37", 
+            "temperature": "-40", 
+            "prev_val": "38.14"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-6.53", 
+            "curr_val": "40.52", 
+            "temperature": "125", 
+            "prev_val": "47.05"
+          }, 
+          {
+            "process": "NN", 
+            "delta_str": "-7.84", 
+            "curr_val": "34.67", 
+            "temperature": "27", 
+            "prev_val": "42.51"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-5.89", 
+            "curr_val": "35.71", 
+            "temperature": "-40", 
+            "prev_val": "41.6"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-3.74", 
+            "curr_val": "47.74", 
+            "temperature": "125", 
+            "prev_val": "51.48"
+          }, 
+          {
+            "process": "SF", 
+            "delta_str": "-1.53", 
+            "curr_val": "45.07", 
+            "temperature": "27", 
+            "prev_val": "46.6"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "-6.66", 
+            "curr_val": "34.74", 
+            "temperature": "-40", 
+            "prev_val": "41.4"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "-3.65", 
+            "curr_val": "46.88", 
+            "temperature": "125", 
+            "prev_val": "50.53"
+          }, 
+          {
+            "process": "SS", 
+            "delta_str": "-5.51", 
+            "curr_val": "40.69", 
+            "temperature": "27", 
+            "prev_val": "46.2"
+          }
+        ], 
+        "output": "PSRR@1M in dB", 
+        "curr_worst_float": 29.739999999999998, 
+        "spec": "> 40"
+      }
+    ]
+  }, 
+  "adexl_prev": 5, 
+  "adexl_curr": 6, 
+  "schematic_prev": 6, 
+  "schematic_curr": 7, 
+  "schematic_diff": {
+    "curr_file": "checkpoint_0007.json", 
+    "curr_checkpoint": 7, 
+    "added": [], 
+    "prev_checkpoint": 6, 
+    "prev_file": "checkpoint_0006.json", 
+    "removed": [], 
+    "modified": [], 
+    "skipped": []
+  }, 
+  "created_at": "2026-06-25 13:23:20", 
+  "checkpoint": "0005", 
+  "adexl_setup_diff": {
+    "removed": {}, 
+    "added": {}, 
+    "changed": {
+      "ILOAD": {
+        "new": "10m", 
+        "old": "1m"
+      }
+    }
+  }, 
+  "type": "comparison"
+}
