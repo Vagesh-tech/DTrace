@@ -1,0 +1,148 @@
+{
+  "source_file": "dtrace_results_0006.csv",
+
+  "shift_correction_applied": false,
+
+  "corner_columns": [
+    "SS_0",
+    "SS_1",
+    "FF_0",
+    "FF_1",
+    "TT_0"
+  ],
+
+  "results": [
+
+    {
+      "test": "Analog_Block:1",
+      "output": "Output Voltage",
+      "nominal": "1.001",
+      "spec": "0.99V - 1.01V",
+      "pass_fail": "pass",
+      "min": "0.998",
+      "max": "1.005",
+
+      "corners": [
+        {
+          "corner":"SS_0",
+          "process":"SS",
+          "temperature":"-40",
+          "value":"0.999"
+        },
+        {
+          "corner":"SS_1",
+          "process":"SS",
+          "temperature":"27",
+          "value":"1.001"
+        },
+        {
+          "corner":"FF_0",
+          "process":"FF",
+          "temperature":"-40",
+          "value":"0.998"
+        },
+        {
+          "corner":"FF_1",
+          "process":"FF",
+          "temperature":"27",
+          "value":"1.002"
+        },
+        {
+          "corner":"TT_0",
+          "process":"TT",
+          "temperature":"27",
+          "value":"1.001"
+        }
+      ]
+    },
+
+    {
+      "test":"Analog_Block:2",
+      "output":"Phase Margin",
+      "nominal":"83.5",
+      "spec":">60",
+      "pass_fail":"pass",
+      "min":"72.3",
+      "max":"94.8",
+
+      "corners":[
+        {
+          "corner":"SS_0",
+          "process":"SS",
+          "temperature":"-40",
+          "value":"84.2"
+        },
+        {
+          "corner":"SS_1",
+          "process":"SS",
+          "temperature":"27",
+          "value":"78.5"
+        },
+        {
+          "corner":"FF_0",
+          "process":"FF",
+          "temperature":"-40",
+          "value":"91.7"
+        },
+        {
+          "corner":"FF_1",
+          "process":"FF",
+          "temperature":"27",
+          "value":"94.8"
+        },
+        {
+          "corner":"TT_0",
+          "process":"TT",
+          "temperature":"27",
+          "value":"83.5"
+        }
+      ]
+    },
+
+    {
+      "test":"Analog_Block:3",
+      "output":"Power Supply Rejection",
+      "nominal":"61.3",
+      "spec":">60",
+      "pass_fail":"near",
+      "min":"59.9",
+      "max":"63.2",
+
+      "corners":[
+        {
+          "corner":"SS_0",
+          "process":"SS",
+          "temperature":"-40",
+          "value":"61.4"
+        },
+        {
+          "corner":"SS_1",
+          "process":"SS",
+          "temperature":"27",
+          "value":"61.8"
+        },
+        {
+          "corner":"FF_0",
+          "process":"FF",
+          "temperature":"-40",
+          "value":"59.9"
+        },
+        {
+          "corner":"FF_1",
+          "process":"FF",
+          "temperature":"27",
+          "value":"60.5"
+        },
+        {
+          "corner":"TT_0",
+          "process":"TT",
+          "temperature":"27",
+          "value":"61.3"
+        }
+      ]
+    }
+
+  ],
+
+  "omitted_rows": []
+}
