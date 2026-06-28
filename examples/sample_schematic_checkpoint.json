@@ -1,0 +1,84 @@
+{
+  "PIN_OUT": {
+    "lib_name": "basic",
+    "cell_name": "opin",
+    "view_name": "symbol",
+    "params": {}
+  },
+
+  "PIN_VDD": {
+    "lib_name": "basic",
+    "cell_name": "ipin",
+    "view_name": "symbol",
+    "params": {}
+  },
+
+  "MP_PASS": {
+    "lib_name": "generic_pdk",
+    "cell_name": "pmos1v",
+    "view_name": "symbol",
+    "params": {
+      "model": "pmos1v",
+      "m": "2",
+      "l": "500n",
+      "w": "1.6m",
+      "fw": "16u",
+      "fingers": "100"
+    }
+  },
+
+  "MN_DRIVER": {
+    "lib_name": "generic_pdk",
+    "cell_name": "nmos1v",
+    "view_name": "symbol",
+    "params": {
+      "model": "nmos1v",
+      "m": "1",
+      "l": "500n",
+      "w": "740n",
+      "fw": "740n",
+      "fingers": "1"
+    }
+  },
+
+  "MN_DIFF1": {
+    "lib_name": "generic_pdk",
+    "cell_name": "nmos1v",
+    "view_name": "symbol",
+    "params": {
+      "model": "nmos1v",
+      "m": "1",
+      "l": "500n",
+      "w": "1u",
+      "fw": "1u",
+      "fingers": "1"
+    }
+  },
+
+  "R_TOP": {
+    "lib_name": "analogLib",
+    "cell_name": "res",
+    "view_name": "symbol",
+    "params": {
+      "r": "225K"
+    }
+  },
+
+  "R_BOTTOM": {
+    "lib_name": "analogLib",
+    "cell_name": "res",
+    "view_name": "symbol",
+    "params": {
+      "r": "25K"
+    }
+  },
+
+  "C_COMP": {
+    "lib_name": "analogLib",
+    "cell_name": "cap",
+    "view_name": "symbol",
+    "params": {
+      "c": "10p"
+    }
+  }
+}
