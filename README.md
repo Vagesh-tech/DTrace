@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/License-MIT-brightgreen" />
 </p>
 
-**DTrace** is an engineering traceability framework for analog IC design workflows in **Cadence Virtuoso ADE XL**.
+**DTrace** is an engineering traceability framework for Cadence Virtuoso ADE XL that combines SKILL automation with Python-based analysis to preserve schematic evolution, simulation results, and engineering rationale across design iterations.**.
 
 It automatically captures schematic checkpoints, ADE XL setup variables, simulation results, result differences, schematic differences, and designer notes so that every design iteration becomes a permanent engineering record.
 
@@ -144,6 +144,16 @@ DTrace is split into two main layers:
   * compares checkpoints
   * generates JSON reports
   * maintains checkpoint history
+ 
+  ### SKILL–Python Integration
+
+The two layers communicate through a file-based interface.
+
+The SKILL layer runs inside Cadence Virtuoso and exports schematic checkpoints, ADE XL setup variables, and simulation result tables as structured CSV and JSON files. It then invokes the Python processing pipeline using system() calls.
+
+The Python layer parses the exported data, compares it with the previous checkpoint, detects schematic and simulation result changes, updates checkpoint metadata, and generates the final engineering report.
+
+This separation keeps all Cadence-specific operations inside SKILL while allowing the comparison, reporting, and data-processing logic to remain modular and extensible in Python.
 
 ![System Architecture](images/01-system-architecture_2.png)
 
