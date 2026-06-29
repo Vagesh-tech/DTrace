@@ -1,92 +1,147 @@
-# DTrace Python Modules
+# Python Processing Engine
 
-This directory contains the Python components of the DTrace engineering traceability framework.
+## Overview
 
-The modules are intentionally separated by responsibility to keep each part of the workflow independent and maintainable.
+This directory contains the Python processing layer of DTrace.
+
+While the SKILL layer is responsible for interacting with Cadence Virtuoso and ADE XL, the Python layer performs all post-processing after data has been exported from the EDA environment.
+
+The processing pipeline converts raw CSV exports into structured JSON data, compares engineering checkpoints, and generates engineering reports.
+
+Each module has a clearly defined responsibility, allowing the processing pipeline to remain modular and maintainable.
 
 ---
 
+# Directory Contents
+
+```text
+python/
+├── dtrace.py
+├── schematic_tool.py
+├── parse_adexl.py
+└── diff_adexl_results.py
+```
+
+---
+
+# Module Overview
+
 ## dtrace.py
 
-Main orchestration engine.
+The orchestration module.
 
-Responsibilities:
+Responsibilities include:
 
-- Receives callbacks from Cadence SKILL
-- Tracks pending checkpoints
-- Coordinates complete checkpoint creation
-- Invokes schematic and simulation comparison
-- Generates immutable checkpoint reports
-- Maintains project history
-- Displays the designer note popup
+* managing checkpoint state
+* coordinating the processing pipeline
+* generating engineering reports
+* maintaining checkpoint history
+* updating project metadata
 
-This is the primary entry point used during normal operation.
+This module serves as the central controller for the Python processing layer.
 
 ---
 
 ## schematic_tool.py
 
-Schematic parser and comparison engine.
+Processes schematic checkpoint data exported by the SKILL layer.
 
-Responsibilities:
+Responsibilities include:
 
-- Parses exported schematic parameter CSV files
-- Builds structured JSON snapshots
-- Compares two schematic checkpoints
-- Detects added, removed and modified devices
-- Reports parameter-level changes
+* parsing schematic CSV files
+* generating structured JSON snapshots
+* comparing schematic checkpoints
+* detecting added instances
+* detecting removed instances
+* detecting modified device parameters
 
-This module is completely independent of ADE XL.
+The generated JSON becomes the schematic portion of each engineering checkpoint.
 
 ---
 
 ## parse_adexl.py
 
-ADE XL result parser.
+Processes simulation results exported from ADE XL.
 
-Responsibilities:
+Responsibilities include:
 
-- Reads ADE XL Detail View CSV exports
-- Detects scalar result tables
-- Extracts process and temperature metadata
-- Parses corner values
-- Produces structured JSON result files
+* reading exported CSV result tables
+* identifying simulation outputs
+* extracting corner information
+* parsing process and temperature metadata
+* generating structured JSON files
 
-Supports both exported CSV files and Interactive.N.csv parsing.
+The parser is metric-agnostic and is not tied to a specific circuit topology.
 
 ---
 
 ## diff_adexl_results.py
 
-Simulation result comparison engine.
+Compares simulation results across checkpoints.
 
-Responsibilities:
+Responsibilities include:
 
-- Compares two parsed ADE XL result files
-- Detects PASS/FAIL transitions
-- Computes worst-corner movement
-- Ranks result changes by magnitude
-- Generates human-readable result summaries
+* identifying regressions
+* identifying improvements
+* detecting value-only changes
+* tracking pass/fail transitions
+* comparing worst-corner behaviour
+* preparing structured comparison data for report generation
 
-The comparison engine is intentionally metric-agnostic and does not contain circuit-specific rules.
+The comparison engine records engineering differences without making design recommendations.
 
 ---
 
-## Design Philosophy
+# Processing Pipeline
 
-Each module performs one clearly defined task.
+The Python layer follows a staged processing model.
 
+```text
+Raw CSV
+    │
+    ▼
+Parser
+    │
+    ▼
+Structured JSON
+    │
+    ▼
+Comparison Engine
+    │
+    ▼
+Checkpoint Report
 ```
-Cadence SKILL
-      │
-      ▼
-dtrace.py
-      │
-      ├────────► schematic_tool.py
-      │
-      ├────────► parse_adexl.py
-      │
-      └────────► diff_adexl_results.py
-```
 
-This separation makes the project easier to maintain, test, and extend while keeping individual modules focused on a single responsibility.
+Separating parsing from comparison keeps each module focused on a single task and simplifies future extensions.
+
+---
+
+# Design Philosophy
+
+The Python modules intentionally avoid direct interaction with the Cadence design database.
+
+Instead, they operate exclusively on exported data.
+
+This separation provides several advantages:
+
+* reduced dependence on Cadence APIs
+* easier debugging
+* transparent intermediate files
+* reusable JSON representations
+* modular processing stages
+
+---
+
+# Python Version
+
+The implementation targets **Python 2.6** to remain compatible with the development environment used during the project.
+
+No third-party Python packages are required.
+
+---
+
+# Summary
+
+The Python layer forms the processing engine of DTrace.
+
+It converts exported engineering data into structured checkpoints, compares design iterations, and generates the engineering reports that provide persistent traceability throughout the analog design workflow.
