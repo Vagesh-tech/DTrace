@@ -626,7 +626,7 @@ LICENSE
 
 ## Author
 
-**Vagish Revankar**
+**Vagesh Revankar**
 
 Analog / Mixed-Signal IC Design
 Cadence Virtuoso • ADE XL • SKILL • Python • EDA Automation
